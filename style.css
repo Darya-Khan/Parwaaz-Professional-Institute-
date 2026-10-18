@@ -1,0 +1,568 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+    scroll-behavior: smooth;
+    }
+
+body{
+    background:#050518;
+    color:white;
+    }
+
+p{
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3{
+     color: dodgerblue;
+}
+
+h2{
+    color: dodgerblue;
+}
+
+/* _____________________Navbar Section____________________________________________________ */
+.nav-bar{
+    display: flex;
+    background-color: #0f0f3a;
+    color: white;
+    justify-content:space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+}
+
+
+.nav-bar h2::after{
+    content: "Institute";
+    color:dodgerblue;
+}
+
+.nav-bar h2{
+    padding-left: 35px;
+     width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  animation: typing 6s steps(20) forwards, blink 0.5s step-end infinite;
+}
+
+.nav-menu{
+    list-style: none;
+    gap: 30px;
+    display: flex;
+}
+
+.nav-menu li{
+    position: relative;
+}
+
+.nav-bar li > a{
+    color: white;
+    padding:10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.nav-bar li > a:hover{
+    background-color:#08081f;
+    border-radius: 5px;
+}
+
+.nav-icon {
+    display: none;
+    font-size: 20px;
+}
+
+.image_logo{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top: -5px;
+}
+
+
+
+
+@media (max-width:768px) {
+    .nav-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-menu{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        max-height: 0;
+        flex-direction: column;
+        background-color: #0f0f3a;
+        color: white;
+        align-items: center;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+
+    #nav-btn:checked~ .nav-menu{
+        max-height: 400px;
+        padding: 10px 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-bar li a{
+        width: 100%;
+        padding: 8px 0;
+        display: block;
+    }
+
+    .moin_image_section .moin_pic{
+        height: 200px;
+        width: 200px;
+    }
+
+    .instructor_section{
+        width: 400px;
+    }
+
+    .manager_section{
+        width: 300px;
+    }
+
+    .Home_image_section img{
+        margin-top: -70px;
+
+    }
+
+
+
+}
+
+/* __________________Media Query For Mobile Screen____________________________________________ */
+
+@media (max-width: 500px) {
+    .main_page_section{
+        flex-flow: column;
+    }
+
+    .nav-bar h2{
+        font-size: 21px;
+        padding-left: 30px;
+    }
+
+    .instructor_classifcation{
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    
+    
+ 
+}
+
+
+
+/* __________________Home Page Section___________________________________________________________ */
+
+.Home_page{
+     /* width: 100%;  */
+     /* background-color: red;  */
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.Home_text_section{
+    padding: 20px;
+    line-height: 30px;
+    flex-direction: row;
+     width: 550px; 
+}
+
+.Home_text_section h1::before{
+    content: "PARWAAZ ";
+    color: dodgerblue;
+}
+
+
+
+.Home_text_section p,h5{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Home_text_section .p1{
+    padding-top: 20px;
+    line-height: 25px;
+}
+
+.Home_image_section img{
+    width: 100%; 
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-color: red; */
+    border-radius: 5px;
+    object-fit: contain;
+    cursor:grab;
+    
+}
+
+.buttons{
+    margin-top: 20px;    
+}
+
+
+ .button_one, .button_two{
+    border-radius: 15px;
+    margin: 8px;
+    padding: 9px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    color: white;
+}
+
+.button_one {
+    background-color:deepskyblue;
+}
+
+.button_one:hover{
+    background-color: rgb(2, 141, 187);
+}
+
+.button_two {
+    background-color: #0f0f3a;
+    border: 1px solid #3c3c7c;   
+}
+
+.button_two:hover{
+    background-color: #2f2f85;
+}
+
+
+/* __________________Main Page Section___________________________________________________________ */
+
+.main_page_section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* height: 270px;  */
+    width: 100%;
+    background-color: #0f0f3a;  
+    margin-bottom: 20px;
+    justify-content: center;   
+    align-items: center;
+    padding: 10px;
+   
+}
+
+.main_page_box{
+    height:210px ;
+    width: 250px;
+     background-color: #0f0f3a; 
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    border: 1px solid #3939a2;
+}
+
+.main_page_box1{
+    /* height:250px ; */
+    width: 300px;
+    /* background-color:aqua;  */
+    padding: 25px;
+}
+
+.main_page_box1 h1{
+    padding-bottom: 10px;
+    color: dodgerblue;
+}
+
+.main_page_box1 p{
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     
+}
+
+.main_page_box h3{
+    color: dodgerblue;
+}
+
+
+
+
+.main_page_box div img{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    
+}
+
+.main_page_box{
+    padding: 10px;
+    line-height: 20px;
+}
+
+.main_page_box p{
+    padding-top:10px ;
+}
+
+.main_page_box_image img{
+    height: 210px;
+    width: 250px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* _____________________ Instructor Manager_____________________________________________ */
+
+
+.manager_part{
+    /* height:250px ;  */
+    /* background-color:deepskyblue;   */
+    padding: 25px;
+    /* width: 550px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+     /* background-color: #050538; */
+     align-items: center;
+}
+
+.manager_section{
+    /* background-color: chocolate; */
+    padding: 10px;
+    width: 600px;
+    margin-left: 20px;
+}
+
+.manager_section_text{
+    padding: 20px;
+    /* background-color: brown; */
+    
+}
+
+
+.instructor_classifcation{
+    /* width: 200px; */
+    background-color: #0f0f3a;
+    border: 1px solid #08081f;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 3px #3939a2;
+    line-height: 25px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.4s ease;
+    
+}
+
+.instructor_classifcation p{
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.media_icon{
+    height: 30px;
+    width: 30px;
+    margin: 10px 5px 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.moin_image_section img{
+    height: 220px;
+    border-radius: 50%;
+    cursor:grab;
+    width: 220px;
+    margin-left: 10px;
+    object-fit: cover;
+    
+}
+
+/* _____________________ Instructor Section________________________________________________________ */
+
+
+.main_page_box2{
+    /* height: 200px ; */
+    width: 200px;
+    background-color: #0f0f3a;
+    border: 1px solid #08081f;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 3px #3939a2;
+    line-height: 25px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 157, 255, 0.25);
+    transition: all 0.4s ease;
+}
+
+.main_page_box2 .instructor_photo{
+    height: 90px;
+    width: 90px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    cursor:grab;
+    object-fit: cover;
+}
+
+.instructor_media_icon{
+    height: 25px;
+    width: 25px;
+    margin: 5px 5px 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.pclass{
+    color: rgb(130, 174, 255);
+}
+
+/* _____________________ Contact Section__________________________________________________ */
+
+.gallery_section{
+    height: 200px;
+    background-color: brown;
+}
+
+.gallery_one{
+    height: 100px;
+    background-color: #0f0f3a;
+    border: 1px solid #08081f;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 3px #3939a2;
+    line-height: 25px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 157, 255, 0.25);
+    transition: all 0.4s ease;
+}
+
+.gallery_photo{
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: grab;
+    object-fit: cover;
+}
+
+/* _________________Contact Section____________________________________________ */
+
+.contact_page_section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* height: 270px;  */
+    width: 100%;
+    background-color: #0f0f3a;  
+    justify-content:center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.contact_box{
+    width: 240px;
+    border-radius: 5px;
+    line-height: 25px;
+    padding: 10px;
+    text-align: center; 
+}
+
+.contact_box a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.instructor_media_icon{
+    height: 25px;
+    width: 25px;
+    margin: 5px 5px 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.institute_logo{
+    height: 90px;
+    width: 90px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    cursor:grab;
+    object-fit: cover;
+    background-color: white;
+}
+
+.contact_page_section h4{
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* _________________Animations and Transations____________________________________________ */
+
+.main_page_box2:hover {
+    transform: translateY(-6px) ;
+    border-color: #009DFF;
+    box-shadow: 0 12px 30px rgba(0, 157, 255, 0.25);
+}
+
+.instructor_classifcation:hover{
+    transform: translateY(-6px) ;
+    border-color: #009DFF;
+    box-shadow: 0 8px 25px rgba(0, 157, 255, 0.25);
+}
+
+
+.main_page_box:hover{
+    border-color: #00b7ff;
+    box-shadow: 0 0 25px rgba(57, 57, 162, 0.2); 
+    transform: translateY(-6px) scale(1.02);
+    /* box-shadow: 1px 2px 3px 3px rgb(57, 57, 162); */ 
+}
+
+@keyframes typing {
+  to { width: 18ch; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
